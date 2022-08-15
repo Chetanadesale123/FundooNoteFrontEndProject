@@ -12,7 +12,7 @@ export class RegistrationComponent implements OnInit {
   submitted = false;
   hide: boolean = true;
 
-  constructor(private formBuilder: FormBuilder,private user: UserService,) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService,) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -44,6 +44,6 @@ export class RegistrationComponent implements OnInit {
   ShowPassword() {
     this.hide = !this.hide;
   }
-  }
+}
 
 

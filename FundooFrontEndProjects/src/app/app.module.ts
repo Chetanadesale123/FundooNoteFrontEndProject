@@ -16,6 +16,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { DisplayComponent } from './Components/display/display.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,15 +34,20 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
     LoginComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
+    DashboardComponent,
+    CreateNoteComponent,
+    DisplayComponent,
+    GetAllNotesComponent,
+    IconsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule, MatInputModule,
-    BrowserAnimationsModule, MatFormFieldModule, MatInputModule, FlexLayoutModule, ReactiveFormsModule,
+    FlexLayoutModule, ReactiveFormsModule,
     FormsModule,
     MatCheckboxModule,
-    MatButtonModule,HttpClientModule,
+    MatButtonModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,MatCardModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

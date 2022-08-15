@@ -7,7 +7,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
   token: any;
-  constructor(private httpService: HttpService) {this.token = localStorage.getItem('token'); }
+  constructor(private httpService: HttpService) { this.token = localStorage.getItem('token'); }
   //Register section
   register(reqdata: any) {
     console.log(reqdata);

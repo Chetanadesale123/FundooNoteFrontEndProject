@@ -1,0 +1,71 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div fxHide.xs>
+        </div>
+        <img src="../../../assets/google_keep.png" alt="img" class="logo">
+        <h1 class="example-app-name">FundooNote</h1>
+        <div class="searchdiv" fxLayoutAlign="space-between center">
+            <mat-form-field appearance="outline" fxHide.xs [style.fontSize.px]="2" class="search" fxFlex="90">
+                <button mat-icon-button class="search-button">
+                    <mat-icon id="search" matTooltip="Search">search</mat-icon>
+                </button>
+                <input fxFlex="50" matInput placeholder="Search" [style.fontSize.px]="18" class="search-window"
+                    autocomplete="off" type="type=" text />
+            </mat-form-field>
+        </div>
+        <div fxFlex="20" class="settingbtn" div fxLayout="row" fxLayoutAlign="end end">
+            <button mat-icon-button aria-label="refresh button">
+                <img src="./../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg" alt="img" class="icon">
+            </button>
+        </div>&nbsp;
+        <div fxflex="20"> <button mat-icon-button aria-label="View agenda button">
+                <img src="./../../../assets/view_agenda_FILL0_wght400_GRAD0_opsz48.svg" alt="img" class="icon">
+            </button>
+        </div>&nbsp;
+        <div fxflex="20"> <button mat-icon-button aria-label="Setting icon">
+                <img src="./../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg" alt="img" class="icon">
+            </button>
+        </div>&nbsp;
+        <div fxflex="20"> <button mat-icon-button aria-label="app icon">
+                <img src="./../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" alt="img" class="icon">
+            </button>
+        </div>&nbsp;
+        <div fxflex="20"> <button mat-icon-button aria-label="profile pic icon">
+                <img src="./../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="img" class="icon">
+            </button>
+        </div>&nbsp;
+    </mat-toolbar>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list class="pic">
+                <div flexLayout="row" fxLayoutAlign="space-between center">
+                    <img src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                    <a mat-list-item routerLink="/Dashboard/notes">Notes</a>
+                </div>
+                <div flexLayout="row" fxLayoutAlign="space-between center">
+                    <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                    <a mat-list-item routerLink=".">Reminders</a>
+                </div>
+                <div flexLayout="row" fxLayoutAlign="space-between center">
+                    <img src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                    <a mat-list-item routerLink=".">Edit Label</a>
+                </div>
+                <div flexLayout="row" fxLayoutAlign="space-between center">
+                    <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                    <a mat-list-item routerLink="/Dashboard/archive">Archive</a>
+                </div>
+                <div flexLayout="row" fxLayoutAlign="space-between center">
+                    <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                    <a mat-list-item routerLink="/Dashboard/trash">Trash</a>
+                </div>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,74 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+    font-family:Product Sans,Arial,sans-serif; 
+    font-size: 22px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+
+  .logo{
+    width: 30px; height:40px;
+  }
+  
+  .searchdiv{
+    width: 50%;
+    margin-left: 70px;
+  }
+  #search {
+    opacity: 0.8;
+  }
+  .search {
+    border-radius: 10%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.02);
+  }
+  .settingbtn{
+    margin-left: 20px;
+    padding-left: 0%;
+    border:none;
+   
+  }
+  .icon{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+  }
+  .icon:hover{
+    background-color: rgba(245, 243, 241, 0.925);
+    cursor: pointer;
+  }
+  .icon > img{
+    height: 25px;
+    margin-top: 5px;
+  }
+  .pic img{
+    width: 20px;
+     height:20px;
+  }

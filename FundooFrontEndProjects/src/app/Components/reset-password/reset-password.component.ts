@@ -11,7 +11,7 @@ export class ResetPasswordComponent implements OnInit {
   resetPasswordForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,private user:UserService) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   ngOnInit(): void {
     this.resetPasswordForm = this.formBuilder.group({
@@ -20,10 +20,8 @@ export class ResetPasswordComponent implements OnInit {
     });
   }
   ResetPassword() {
-    
     console.log("filled data", this.resetPasswordForm.value);
   }
-    
-  }
+}
 
 
